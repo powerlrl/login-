@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+  <!-- 注册表单部分 -->
+  <form action="" class='loginForm'>
+    <h2>Login</h2>
+    <div class="txtWrapper">
+      <input type="text">
+      <span data-placeholder='Username'></span>
+    </div>
+    <div class="txtWrapper">
+      <input type="password">
+      <span data-placeholder='Password'></span>
+    </div>
+    <div>
+      <button class="btn">Login</button>
+    </div>
+    <div class='bottomText'>
+      Dont'have account <a href="#">Sign up</a>
+    </div>
+  </form>
+  <!-- 事件 -->
+  <script>
+    window.onload = function () {
+      let Oinput = document.querySelectorAll('input')
+      for(let i=0 ;i<Oinput.length; i++){
+        Oinput[i].onfocus = function () {
+          this.className = "focus";
+        }
+        Oinput[i].onblur = function () {
+          if(Oinput[i].value == ""){
+            this.className = "";
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
